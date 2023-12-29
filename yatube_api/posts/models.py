@@ -33,6 +33,7 @@ class Post(models.Model):
 
     class Meta:
         default_related_name = 'posts'
+        ordering = ('-pub_date',)
 
     def __str__(self):
         return (
@@ -54,6 +55,7 @@ class Comment(models.Model):
 
     class Meta:
         default_related_name = 'comments'
+        ordering = ('created',)
 
     def __str__(self):
         return (
